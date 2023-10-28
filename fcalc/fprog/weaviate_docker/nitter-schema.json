@@ -1,0 +1,161 @@
+{
+  "classes": [
+    {
+      "class": "Tweet",
+      "properties": [
+        {
+          "dataType": ["text"],
+          "name": "text"
+        },
+        {
+          "dataType": ["text"],
+          "name": "username"
+        },
+        {
+          "dataType": ["text"],
+          "name": "tweetId"
+        },
+        {
+          "dataType": ["text"],
+          "name": "timestamp"
+        },
+        {
+          "dataType": ["int"],
+          "name": "retweets"
+        },
+        {
+          "dataType": ["int"],
+          "name": "favorites"
+        }
+      ],
+      "description": "A class to represent a tweet",
+      "vectorizer": "text2vec-transformers"
+    },
+    {
+      "class": "Article",
+      "properties": [
+        {
+          "dataType": ["string"],
+          "name": "title",
+          "indexInverted": true
+        },
+        {
+          "dataType": ["string"],
+          "name": "content",
+          "indexInverted": true
+        },
+        {
+          "dataType": ["string"],
+          "name": "url",
+          "indexInverted": true
+        },
+        {
+          "dataType": ["string"],
+          "name": "summary",
+          "indexInverted": true
+        },
+        {
+          "dataType": ["number"],
+          "name": "sentiment"
+        }
+      ],
+      "description": "A class to represent a news article",
+      "vectorizer": "text2vec-transformers"
+    },
+    {
+      "class": "Fact",
+      "properties": [
+        {
+          "name": "fact_name",
+          "dataType": ["string"]
+        },
+        {
+          "name": "companyName",
+          "dataType": ["string"]
+        },
+        {
+          "name": "label",
+          "dataType": ["text"]
+        },
+        {
+          "name": "end",
+          "dataType": ["string"]
+        },
+        {
+          "name": "val",
+          "dataType": ["int"]
+        },
+        {
+          "name": "accn",
+          "dataType": ["string"]
+        },
+        {
+          "name": "fy",
+          "dataType": ["int"]
+        },
+        {
+          "name": "fp",
+          "dataType": ["string"]
+        },
+        {
+          "name": "form",
+          "dataType": ["string"]
+        },
+        {
+          "name": "filed",
+          "dataType": ["string"]
+        }
+      ],
+      "description": "A class to represent EDGAR data",
+      "vectorizer": "text2vec-transformers"
+    },
+    {
+      "class": "File",
+      "properties": [
+        {
+          "name": "companyName",
+          "dataType": ["string"],
+          "indexInverted": true
+        },
+        {
+          "name": "fileType",
+          "dataType": ["string"],
+          "indexInverted": true
+        },
+        {
+          "name": "date",
+          "dataType": ["string"],
+          "indexInverted": true
+        },
+        {
+          "name": "pdfContent",
+          "dataType": ["text"]
+        },
+        {
+          "name": "pdfLink",
+          "dataType": ["string"]
+        }
+      ],
+      "description": "A class to represent a company's financial document in PDF format",
+      "vectorizer": "text2vec-transformers"
+    },
+    {
+      "class": "EdgarForm",
+      "properties": [
+        {
+          "name": "companyName",
+          "dataType": ["string"],
+          "indexInverted": true
+        },
+        {
+          "name": "content",
+          "dataType": ["text"]
+        }
+      ],
+      "description": "A class to represent a form from the Edgar database",
+      "vectorizer": "text2vec-transformers"
+    }
+  ]
+}
+
+
